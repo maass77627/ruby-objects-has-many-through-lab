@@ -24,6 +24,7 @@ describe 'Doctor' do
       appointment_2 = Appointment.new('Saturday, January 33rd', hevydevy, doctor_smith)
       
       expect(doctor_who.appointments).to include(appointment)
+      expect(doctor_who.appointments).not_to include(appointment_2)
       expect(doctor_smith.appointments).to include(appointment_2)
 
     end
